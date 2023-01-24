@@ -2,7 +2,7 @@
   "routes": [
     {
       "route": "/api-rewrite",
-      "rewrite": "/api/__render"
+      "rewrite": "/api/auth-test"
     },
     {
       "route": "/protected",
@@ -10,6 +10,6 @@
     }
   ],
   "navigationFallback": {
-    "rewrite": "/api/__render"
+    "rewrite": "/api/auth-test"
   }
 }

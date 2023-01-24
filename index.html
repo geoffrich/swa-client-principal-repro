@@ -8,5 +8,36 @@
   </head>
   <body>
     <h1>SWA Client Principal Header Repro</h1>
+    <p>x-ms-client-principal header</p>
+    <nav>
+      <a href="/.auth/login/github">Login</a>
+      <a href="/.auth/logout">Logout</a>
+    </nav>
+    <ul>
+      <li>
+        <a href="/api/auth-test">Direct request to API route:</a> includes
+        header
+      </li>
+      <li>
+        <a href="/auth-rewrite"
+          >Request to route that is explicitly rewritten to the API route:</a
+        >
+        includes header
+      </li>
+      <li>
+        <a href="/protected"
+          >Request to route that is behind allowedRoles but is rewritten via
+          navigationFallback:</a
+        >
+        includes header
+      </li>
+      <li>
+        <a href="/whatever"
+          >Request to route that does not have allowedRoles and is rewritten via
+          navigationFallback:</a
+        >
+        <b>does not</b> include header.
+      </li>
+    </ul>
   </body>
 </html>
