@@ -3,6 +3,10 @@
     {
       "route": "/api-rewrite",
       "rewrite": "/api/__render"
+    },
+    {
+      "route": "/protected",
+      "allowedRoles": ["authenticated"]
     }
   ],
   "navigationFallback": {
