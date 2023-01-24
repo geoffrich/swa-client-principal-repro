@@ -4,5 +4,8 @@
       "route": "/api-rewrite",
       "rewrite": "/api/__render"
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/api/__render"
+  }
 }
