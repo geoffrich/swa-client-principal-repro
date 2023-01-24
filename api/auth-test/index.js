@@ -1,6 +1,8 @@
 module.exports = async function (context, req) {
+  const msHeaders = Object.entries(req.headers).filter(([name, value]) =>
+    name.startsWith("x-ms-client-principal")
+  );
   context.res = {
-    // status: 200, /* Defaults to 200 */
-    body: req.headers
+    body: Object.fromEntries(msHeaders)
   };
 };
