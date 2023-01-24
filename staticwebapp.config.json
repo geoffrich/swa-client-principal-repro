@@ -3,6 +3,13 @@
     {
       "route": "/api-rewrite",
       "rewrite": "/api/auth-test"
+    },
+    {
+      "route": "/protected",
+      "allowedRoles": ["authenticated"]
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/api/auth-test"
+  }
 }
